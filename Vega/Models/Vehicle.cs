@@ -1,10 +1,13 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Vega.Models
 {
     public class Vehicle
     {
         public int Id { get; set; }
+        [Required]
+        public bool isRegistered { get; set; }
         public Make Make { get; set; }
         public int MakeId { get; set; }
         public Model Model { get; set; }
