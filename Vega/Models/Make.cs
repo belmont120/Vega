@@ -11,6 +11,7 @@ namespace Vega.Models
         [StringLength(255)]
         public string Name { get; set; }
         public ICollection<Model> Models { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; }
 
         public Make()
         {

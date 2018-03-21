@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Vega.Models
@@ -14,5 +15,6 @@ namespace Vega.Models
         [Required]
         [StringLength(255)]
         public string Email { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; }
     }
 }

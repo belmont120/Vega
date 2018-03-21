@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,6 +14,8 @@ namespace Vega.Models
 
         public Make Make { get; set; }
         public int MakeId { get; set; }
+
+        public ICollection<Vehicle> Vehicles { get; set; }
 
     }
 }
