@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,6 +15,7 @@ namespace Vega.Models
         public int ModelId { get; set; }
         public Contact Contact { get; set; }
         public int ContactId { get; set; }
+        public DateTime LastUpdate { get; set; }
         public ICollection<VehicleFeature> VehicleFeatures { get; set; }
     }
 }
