@@ -3,7 +3,7 @@
 <form>
   <div class="form-group">
     <label for="make">Make</label>
-    <select name="make" id="make" class="form-control" (change)="onMakeChange()"  [(ngModel)]="vehicle.make" required>
+    <select name="make" id="make" class="form-control" (change)="onMakeChange()" [(ngModel)]="vehicle.make" required>
       <option value=""></option>
       <option *ngFor="let make of makes" [ngValue]="make">{{ make.name }}</option>
     </select>
@@ -15,4 +15,14 @@
       <option *ngFor="let model of models" [ngValue]="model">{{ model.name }}</option>
     </select>
   </div>
+
+  <h2>Features</h2>
+  <div class="col-md-6 col-lg-4">
+    <div *ngFor="let feature of features" class="checkbox">
+      <label for="feature{{feature.id}}">
+        <input type="checkbox" id="feature{{feature.id}}"> {{ feature.name }}
+      </label>
+    </div>
+  </div>
+
 </form>
