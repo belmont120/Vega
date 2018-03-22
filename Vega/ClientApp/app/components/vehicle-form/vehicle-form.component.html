@@ -4,13 +4,15 @@
   <div class="form-group">
     <label for="make">Make</label>
     <select name="make" id="make" class="form-control" (change)="onMakeChange()"  [(ngModel)]="vehicle.make" required>
-      <option *ngFor="let make of makes" [ngValue]="make" [selected]="make.id === vehicle.make ? vehicle.make.id : 0">{{ make.name }}</option>
+      <option value=""></option>
+      <option *ngFor="let make of makes" [ngValue]="make">{{ make.name }}</option>
     </select>
   </div>
   <div class="form-group">
     <label for="model">Model</label>
-    <select name="model" id="model" class="form-control" (change)="onModelChange()"  [(ngModel)]="vehicle.model" required>
-      <option *ngFor="let model of models" [ngValue]="model" [selected]="model.id === vehicle.model ? vehicle.model.id : 0">{{ model.name }}</option>
+    <select name="model" id="model" class="form-control" required>
+      <option value=""></option>
+      <option *ngFor="let model of models" [ngValue]="model">{{ model.name }}</option>
     </select>
   </div>
 </form>
