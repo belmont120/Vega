@@ -1,4 +1,7 @@
+import { Model } from "./model";
+
 export class Make {
-    Id: number = 0;
-    Name: string = "";
+    id: number = 0;
+    name: string = "";
+    models: Model[] = [];
 }

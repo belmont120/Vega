@@ -1,3 +1,4 @@
+import { ModelService } from './services/model.service';
 import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -37,6 +38,7 @@ import { MakeService } from './services/make.service';
     ],
     providers: [
         MakeService,
+        ModelService,
     ],
 })
 export class AppModuleShared {
