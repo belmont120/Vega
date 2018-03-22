@@ -21,7 +21,7 @@ namespace Vega.Controllers
         [HttpGet("/api/models")]
         public async Task<IEnumerable<ModelResource>> GetModels()
         {
-            var models = await context.Models.ToListAsync();
+            var models = await context.Models.Include(m => m.Make).ToListAsync();
             return mapper.Map<List<Model>, List<ModelResource>>(models);
         }
     }
