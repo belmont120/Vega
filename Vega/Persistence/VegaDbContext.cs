@@ -35,6 +35,10 @@ namespace Vega.Persistence
                 .HasForeignKey(v => v.ModelId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Vehicle>()
+                .Property(v => v.LastUpdate)
+                .HasDefaultValueSql("GETDATE()");
+
             modelBuilder.Entity<VehicleFeature>()
                 .HasKey(vf => new { vf.VehicleId, vf.FeatureId });
 
